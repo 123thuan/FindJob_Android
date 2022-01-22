@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:id="@+id/swipe"
+app:leftEdgeSwipeOffset="0dp"
+app:rightEdgeSwipeOffset="0dp"
+android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:id="@+id/bottom_wraper"
+    android:layout_width="240dp"
+    android:weightSum="3"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Edit"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#0076a5"
+        android:gravity="center"
+        android:text="Edit"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/Share"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#2cbb00"
+        android:gravity="center"
+        android:text="Share"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/Delete"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="Delete"
+        android:textColor="#fff"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/bottom_wrapper1"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <ImageButton
+        android:id="@+id/btnLocation"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="#2196F3"
+        android:src="@drawable/circle_ic"/>
+</LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/image_profile"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/image_profile"
+            android:layout_toStartOf="@+id/post_image"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/username"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment"
+                android:maxLines="5"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/post_image"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
